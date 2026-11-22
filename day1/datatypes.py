@@ -144,27 +144,27 @@
 
 #tar13
 
-first_name = input("Enter first name: ")
-last_name=  input("Enter last name: ")
-age = input("Enter age: ")
-school_name = input("Enter school name: ")
-course_name = input("Enter course name: ")
-months = int(input("Enter number of months: "))
-monthly_price = float(input("Enter monthly price: "))
-print(f"""
-    ================================
-        Student registration
-    =================================
-    
-    Student: {first_name} {last_name}
-    Age: {age}
-    Institution: {school_name}
-    Course: {course_name}
-    Duration: {months}
-    Monthly price: {monthly_price}
-    
-    Total Course Price: {monthly_price * months}
-""")
+# first_name = input("Enter first name: ")
+# last_name=  input("Enter last name: ")
+# age = input("Enter age: ")
+# school_name = input("Enter school name: ")
+# course_name = input("Enter course name: ")
+# months = int(input("Enter number of months: "))
+# monthly_price = float(input("Enter monthly price: "))
+# print(f"""
+#     ================================
+#         Student registration
+#     =================================
+#
+#     Student: {first_name} {last_name}
+#     Age: {age}
+#     Institution: {school_name}
+#     Course: {course_name}
+#     Duration: {months}
+#     Monthly price: {monthly_price}
+#
+#     Total Course Price: {monthly_price * months}
+# """)
 
 
 
