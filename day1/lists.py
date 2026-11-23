@@ -315,74 +315,74 @@ from sys import set_coroutine_origin_tracking_depth
 #tar29 project
 
 
-grades = [85, 72, 90, 55, 100, 63, 48, 77]
-
-choose = 2
-
-while choose != 11:
-    print("""
-    ===== Grades Management =====
-
-1. Show all grades
-2. Add a grade
-3. Search for a grade
-4. Remove a grade
-5. Show passing grades
-6. Show failing grades
-7. Show highest and lowest grade
-8. Show average grade
-9. Show first 3 grades
-10. Show grades in reverse
-11. Exit
-
-    """)
-    choose = int(input())
-    if choose == 1:
-        for num in grades:
-            print(num)
-    elif choose == 2:
-        new = int(input("Add grade: "))
-        grades.append(new)
-    elif choose == 3:
-        search = int(input("Enter a grade: "))
-        for i in range(len(grades)):
-            if grades[i] == search:
-                print(f"index: {i}")
-    elif choose == 4:
-        remove = int(input("Enter a grade to remove: "))
-        found = False
-        for num in grades:
-            if remove == num:
-                found = True
-                grades.remove(remove)
-        if not found:
-            print("Not found")
-    elif choose == 5:
-        passing = [grade for grade in grades if grade > 60]
-        print(f"Passing grades: {passing}")
-    elif choose == 6:
-        fail = [grade for grade in grades if grade < 60]
-        print(f"failing grades: {fail}")
-    elif choose == 7:
-        high = 0
-        low = 101
-        for num in grades:
-            if num > high:
-                high = num
-            if num < low:
-                low = num
-        print(f"Highest: {high}, Lowest: {low}")
-    elif choose == 8:
-        summ = 0
-        for num in grades:
-            summ += num
-        print(f"Average: {summ / len(grades)}")
-    elif choose == 9:
-        print(f"first 3 grade: {grades[:3]}")
-    elif choose == 10:
-        print(f"reverse: {grades[::-1]}")
-
-print("Finished")
+# grades = [85, 72, 90, 55, 100, 63, 48, 77]
+#
+# choose = 2
+#
+# while choose != 11:
+#     print("""
+#     ===== Grades Management =====
+#
+# 1. Show all grades
+# 2. Add a grade
+# 3. Search for a grade
+# 4. Remove a grade
+# 5. Show passing grades
+# 6. Show failing grades
+# 7. Show highest and lowest grade
+# 8. Show average grade
+# 9. Show first 3 grades
+# 10. Show grades in reverse
+# 11. Exit
+#
+#     """)
+#     choose = int(input())
+#     if choose == 1:
+#         for num in grades:
+#             print(num)
+#     elif choose == 2:
+#         new = int(input("Add grade: "))
+#         grades.append(new)
+#     elif choose == 3:
+#         search = int(input("Enter a grade: "))
+#         for i in range(len(grades)):
+#             if grades[i] == search:
+#                 print(f"index: {i}")
+#     elif choose == 4:
+#         remove = int(input("Enter a grade to remove: "))
+#         found = False
+#         for num in grades:
+#             if remove == num:
+#                 found = True
+#                 grades.remove(remove)
+#         if not found:
+#             print("Not found")
+#     elif choose == 5:
+#         passing = [grade for grade in grades if grade > 60]
+#         print(f"Passing grades: {passing}")
+#     elif choose == 6:
+#         fail = [grade for grade in grades if grade < 60]
+#         print(f"failing grades: {fail}")
+#     elif choose == 7:
+#         high = 0
+#         low = 101
+#         for num in grades:
+#             if num > high:
+#                 high = num
+#             if num < low:
+#                 low = num
+#         print(f"Highest: {high}, Lowest: {low}")
+#     elif choose == 8:
+#         summ = 0
+#         for num in grades:
+#             summ += num
+#         print(f"Average: {summ / len(grades)}")
+#     elif choose == 9:
+#         print(f"first 3 grade: {grades[:3]}")
+#     elif choose == 10:
+#         print(f"reverse: {grades[::-1]}")
+#
+# print("Finished")
 
 
 
