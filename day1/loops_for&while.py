@@ -319,46 +319,46 @@ import random
 #tar29
 
 
-choose = 1
-while choose != 3:
-    print("""
-    ===== MATH GAME =====
-    
-    1. Start Game
-    2. View Instructions
-    3. Exit
-    
-    Choose:
-    
-    """)
-    choose = int(input())
-    points = 0
-    if choose == 1:
-        for j in range(1, 6):
-            for z in range(1, 3):
-                print(f"{j} + {z} = ?")
-                answer = int(input())
-                if j + z == answer:
-                    print("Right answer!")
-                    points += 1
-                else:
-                    print("Wrong answer!")
-    elif choose == 2:
-        print("10 math questions")
-
-    print(points)
-
-    print("""
-        ===== MATH GAME =====
-
-        1. Start Game
-        2. View Instructions
-        3. Exit
-
-        Choose:
-
-        """)
-    choose = int(input())
+# choose = 1
+# while choose != 3:
+#     print("""
+#     ===== MATH GAME =====
+#
+#     1. Start Game
+#     2. View Instructions
+#     3. Exit
+#
+#     Choose:
+#
+#     """)
+#     choose = int(input())
+#     points = 0
+#     if choose == 1:
+#         for j in range(1, 6):
+#             for z in range(1, 3):
+#                 print(f"{j} + {z} = ?")
+#                 answer = int(input())
+#                 if j + z == answer:
+#                     print("Right answer!")
+#                     points += 1
+#                 else:
+#                     print("Wrong answer!")
+#     elif choose == 2:
+#         print("10 math questions")
+#
+#     print(points)
+#
+#     print("""
+#         ===== MATH GAME =====
+#
+#         1. Start Game
+#         2. View Instructions
+#         3. Exit
+#
+#         Choose:
+#
+#         """)
+#     choose = int(input())
 
 
 
