@@ -338,95 +338,95 @@ from pip._internal.vcs import git
 
 #tar22 project
 
-
-products = [    {"name": "Laptop", "price": 4500, "stock": 10},
-                {"name": "Mouse", "price": 80, "stock": 50},
-                {"name": "Keyboard", "price": 150, "stock": 20},
-                {"name": "Screen", "price": 900, "stock": 15}]
-
-choose = 5
-while choose != 0:
-    print("""
-    ===== Store Management =====
-
-1. Show all products
-2. Add product
-3. Search product
-4. Update product price
-5. Update product stock
-6. Sell product
-7. Show products by price
-8. Show products with low stock
-9. Show total inventory value
-0. Exit
-
-    """)
-    choose = int(input())
-    if choose == 1:
-        print(products)
-    elif choose == 2:
-        name = input("Enter name: ")
-        price = int(input("Enter price: "))
-        stock = int(input("Enter stock: "))
-        products.append({"name": name, "price": price, "stock": stock})
-        print("Added successfully")
-    elif choose == 3:
-        name = input("Enter product to search: ")
-        found= False
-        for item in products:
-            if item["name"] == name:
-                found = True
-                print(item)
-        if not found:
-            print("Not found!")
-    elif choose == 4:
-        name = input("Enter product to update price: ")
-        found = False
-        for item in products:
-            if item["name"] == name:
-                found = True
-                price = int(input("Product found, enter new price: "))
-                item["price"] = price
-        if not found:
-            print("Not found!")
-    elif choose == 5:
-        name = input("Enter product to update stock: ")
-        found = False
-        for item in products:
-            if item["name"] == name:
-                found = True
-                stock = int(input("Product found, enter new price: "))
-                item["stock"] = stock
-        if not found:
-            print("Not found!")
-    elif choose == 6:
-        name = input("Enter product's name to sell: ")
-        quantity = int(input("Enter quantity to sell: "))
-        found = False
-        for item in products:
-            if item["name"] == name:
-                found = True
-                if item["stock"] < quantity:
-                    print("Not enough in stock!")
-                else:
-                    item["stock"] -= quantity
-                    print("Stock updated")
-        if not found:
-            print("Not found!")
-    elif choose == 7:
-        price = int(input("Enter price limit to show products: "))
-        for item in products:
-            if item["price"] < price:
-                print(item)
-    elif choose == 8:
-        low = [item for item in products if item["stock"] < 10]
-        print(low)
-
-    elif choose == 9:
-        all = 0
-        for item in products:
-            all += item["price"] * item["stock"]
-        print(f"total vlue: {all}")
+#
+# products = [    {"name": "Laptop", "price": 4500, "stock": 10},
+#                 {"name": "Mouse", "price": 80, "stock": 50},
+#                 {"name": "Keyboard", "price": 150, "stock": 20},
+#                 {"name": "Screen", "price": 900, "stock": 15}]
+#
+# choose = 5
+# while choose != 0:
+#     print("""
+#     ===== Store Management =====
+#
+# 1. Show all products
+# 2. Add product
+# 3. Search product
+# 4. Update product price
+# 5. Update product stock
+# 6. Sell product
+# 7. Show products by price
+# 8. Show products with low stock
+# 9. Show total inventory value
+# 0. Exit
+#
+#     """)
+#     choose = int(input())
+#     if choose == 1:
+#         print(products)
+#     elif choose == 2:
+#         name = input("Enter name: ")
+#         price = int(input("Enter price: "))
+#         stock = int(input("Enter stock: "))
+#         products.append({"name": name, "price": price, "stock": stock})
+#         print("Added successfully")
+#     elif choose == 3:
+#         name = input("Enter product to search: ")
+#         found= False
+#         for item in products:
+#             if item["name"] == name:
+#                 found = True
+#                 print(item)
+#         if not found:
+#             print("Not found!")
+#     elif choose == 4:
+#         name = input("Enter product to update price: ")
+#         found = False
+#         for item in products:
+#             if item["name"] == name:
+#                 found = True
+#                 price = int(input("Product found, enter new price: "))
+#                 item["price"] = price
+#         if not found:
+#             print("Not found!")
+#     elif choose == 5:
+#         name = input("Enter product to update stock: ")
+#         found = False
+#         for item in products:
+#             if item["name"] == name:
+#                 found = True
+#                 stock = int(input("Product found, enter new price: "))
+#                 item["stock"] = stock
+#         if not found:
+#             print("Not found!")
+#     elif choose == 6:
+#         name = input("Enter product's name to sell: ")
+#         quantity = int(input("Enter quantity to sell: "))
+#         found = False
+#         for item in products:
+#             if item["name"] == name:
+#                 found = True
+#                 if item["stock"] < quantity:
+#                     print("Not enough in stock!")
+#                 else:
+#                     item["stock"] -= quantity
+#                     print("Stock updated")
+#         if not found:
+#             print("Not found!")
+#     elif choose == 7:
+#         price = int(input("Enter price limit to show products: "))
+#         for item in products:
+#             if item["price"] < price:
+#                 print(item)
+#     elif choose == 8:
+#         low = [item for item in products if item["stock"] < 10]
+#         print(low)
+#
+#     elif choose == 9:
+#         all = 0
+#         for item in products:
+#             all += item["price"] * item["stock"]
+#         print(f"total vlue: {all}")
 
 
 
